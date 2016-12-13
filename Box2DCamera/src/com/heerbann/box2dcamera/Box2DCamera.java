@@ -323,12 +323,96 @@ public class Box2DCamera extends InputAdapter{
 		
 	}
 	
-	public static int panButton = Buttons.LEFT;
+	private int panButton = Buttons.LEFT;
 	
 	private boolean panLockX = false, panLockY = false;
 	private boolean zoomLock;
 	private float zoomIncrement = 0.25f, minZoom = 1, maxZoom = 10;
 	
+	/**
+	 * @return the {@link Buttons} used for panning in this camera
+	 */
+	public int getPanButton() {
+		return panButton;
+	}
+
+	/**
+	 * @param panButton the {@link Buttons} used for panning in this camera
+	 */
+	public void setPanButton(int panButton) {
+		this.panButton = panButton;
+	}
+
+	/**
+	 * if true the camera can't be panned in x direction. default = false
+	 */
+	public boolean isPanLockX() {
+		return panLockX;
+	}
+
+	/**
+	 * if true the camera can't be panned in x direction. default = false
+	 */
+	public void setPanLockX(boolean panLockX) {
+		this.panLockX = panLockX;
+	}
+
+	/**
+	 * if true the camera can't be panned in y direction. default = false
+	 */
+	public boolean isPanLockY() {
+		return panLockY;
+	}
+
+	/**
+	 * if true the camera can't be panned in y direction. default = false
+	 */
+	public void setPanLockY(boolean panLockY) {
+		this.panLockY = panLockY;
+	}
+
+	/**
+	 * if true the camera can't be zoomed. default = false
+	 */
+	public boolean isZoomLock() {
+		return zoomLock;
+	}
+
+	/**
+	 * if true the camera can't be zoomed. default = false
+	 */
+	public void setZoomLock(boolean zoomLock) {
+		this.zoomLock = zoomLock;
+	}
+
+	/**
+	 * @return the min zoom. default = 1
+	 */
+	public float getMinZoom() {
+		return minZoom;
+	}
+
+	/**
+	 * @param minZoom the min zoom. default = 1
+	 */
+	public void setMinZoom(float minZoom) {
+		this.minZoom = minZoom;
+	}
+
+	/**
+	 * @return the max zoom. default = 10
+	 */
+	public float getMaxZoom() {
+		return maxZoom;
+	}
+
+	/**
+	 * @param the max zoom. default = 10 (max: 1000)
+	 */
+	public void setMaxZoom(float maxZoom) {
+		this.maxZoom = maxZoom;
+	}
+
 	/**
 	 * Translates the camera (not the viewport) by the given delta
 	 * @param dx
