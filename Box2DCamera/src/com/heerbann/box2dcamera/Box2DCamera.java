@@ -22,13 +22,13 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 /**
  * Creates a new Box2DCamera. A Box2DCamera queries a Box2D {@link World} for bodies with a {@link Body#getUserData()} containing a class implementing {@link RenderItem}
  * All Objects not implementing the interface or null will be silently ignored.<br>
- * @author Heerbann
+ * @author Heerbann<info@heerbann.com>
  */
 public class Box2DCamera extends InputAdapter{
 
 	/**
 	 * An implementation of viewport for moving it at will
-	 * @author Heerbann
+	 * @author Heerbann<info@heerbann.com>
 	 */
 	private class InteractiveViewport extends ScreenViewport{
 			
@@ -46,7 +46,7 @@ public class Box2DCamera extends InputAdapter{
 	
 	/**
 	 * The interface which needs to be implemented by the class added as userdata to a body
-	 * @author Heerbann
+	 * @author Heerbann<info@heerbann.com>
 	 */
 	public interface RenderItem{
 		/**
